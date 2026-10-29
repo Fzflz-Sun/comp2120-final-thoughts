@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>软件工程 · Final Thoughts｜COMP2120/6120 双语知识库与练习</title>
+<meta name="description" content="基于 COMP2120/6120 Final Thoughts 讲义整理的中英双语软件工程知识库：11 个模块、知识点中英对照、Matching / Selection / Short Answer / Applied 四类练习与参考答案。">
+<link rel="stylesheet" href="assets/styles.css?v=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230e2a4a'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' fill='%23d7ab55' text-anchor='middle'%3ESE%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">SE</span>
+      <span class="brand-text">
+        <strong>软件工程 · Final Thoughts</strong>
+        <small>COMP2120/6120 · 双语知识库与练习</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="主导航">
+      <a href="#knowledge">知识汇总</a>
+      <a href="#practice">练习</a>
+      <a href="#glossary">术语索引</a>
+      <button class="ghost-btn" id="resetProgress" type="button">重置进度</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">COMP2120 / COMP6120 · Semester 2, 2025</p>
+    <h1>
+      软件工程 · 期末知识总览
+      <span class="en">Software Engineering — Final Thoughts</span>
+    </h1>
+    <p class="hero-lead">
+      以中文搭建章节、导航与索引，以英文承载全部知识点与练习。
+      覆盖过程与风险、度量、代码审查、需求、DevOps、测试、架构、缺陷管理、增量调试与开源许可；
+      每道题均附<strong>英文参考答案</strong>，默认隐藏，点击后展开。
+    </p>
+
+    <div class="exam-strip">
+      <span class="exam-chip"><b>Exam</b> Friday, 07/11/2025 · 09:00–12:00</span>
+      <span class="exam-chip"><b>Venue</b> CSIT Comp Labs 108</span>
+      <span class="exam-chip"><b>Format</b> Closed-book · 3 hours</span>
+      <span class="exam-chip"><b>Scope</b> Everything taught before the exam</span>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat"><b id="statModules">11</b><span>知识模块 · Modules</span></div>
+      <div class="stat"><b id="statConcepts">—</b><span>知识点 · Concepts</span></div>
+      <div class="stat"><b id="statQuestions">—</b><span>练习题 · Exercises</span></div>
+      <div class="stat"><b id="statTypes">4</b><span>题型 · Question types</span></div>
+    </div>
+
+    <p class="disclaimer">
+      说明：本页依据讲义 “Final Thoughts” 整理，用于复习与自测。期末考试覆盖考试前讲授的全部内容，并不限于本讲义；
+      讲义中的图表、代码与引文版权归原作者及 ANU 所有，此处以文字重述与自编练习呈现。
+    </p>
+  </div>
+</section>
+
+<main class="wrap layout">
+  <aside class="sidebar" aria-label="章节索引">
+    <h2>Chapters</h2>
+    <p class="side-sub">章节索引 · 点击跳转</p>
+    <ol class="side-nav" id="sideNav"></ol>
+    <div class="side-tools">
+      <h3>练习进度</h3>
+      <div class="mini-progress"><span id="miniProgress"></span></div>
+      <div class="mini-progress-label">
+        <span>已展开答案</span>
+        <span id="miniProgressText">0 / 0</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="content">
+    <section id="knowledge" aria-labelledby="knowledgeTitle">
+      <div class="section-head">
+        <p class="section-kicker">Part I · Knowledge</p>
+        <h2 id="knowledgeTitle">知识汇总 <span class="en">Bilingual Knowledge Base</span></h2>
+        <p>每个知识点均给出英文原文表述与中文解释，并保留讲义中的分类、流程与对照表。可按关键词检索。</p>
+      </div>
+
+      <div class="toolbar-row" style="margin-bottom: 26px;">
+        <div class="search-wrap">
+          <label class="visually-hidden" for="searchKnowledge">检索知识点</label>
+          <input id="searchKnowledge" type="search" placeholder="检索知识点：如 inspection、delta debugging、许可…" autocomplete="off">
+        </div>
+        <span class="progress-text" id="searchStatus" aria-live="polite"></span>
+      </div>
+
+      <div id="knowledgeList"></div>
+    </section>
+
+    <section id="practice" aria-labelledby="practiceTitle" style="margin-top: 30px;">
+      <div class="section-head">
+        <p class="section-kicker">Part II · Practice</p>
+        <h2 id="practiceTitle">练习 <span class="en">Four Exercise Formats</span></h2>
+        <p>Matching 情景匹配 · Selection 多选 · Short Answer 简答 · Applied 应用分析。答案默认隐藏，先作答再看参考答案。</p>
+      </div>
+
+      <div class="practice-toolbar">
+        <div class="toolbar-row">
+          <div class="search-wrap">
+            <label class="visually-hidden" for="searchQuestions">检索题目</label>
+            <input id="searchQuestions" type="search" placeholder="检索题目 / 选项 / 答案关键词…" autocomplete="off">
+          </div>
+          <div class="select-wrap">
+            <label class="visually-hidden" for="topicFilter">按模块筛选</label>
+            <select id="topicFilter">
+              <option value="all">全部模块 · All modules</option>
+            </select>
+          </div>
+        </div>
+        <div class="toolbar-row" style="margin-top: 10px;" id="typeFilters">
+          <button class="filter-chip is-on" data-type="all" type="button">全部 <span class="count" id="countAll"></span></button>
+          <button class="filter-chip" data-type="matching" type="button">Matching <span class="count" id="countMatching"></span></button>
+          <button class="filter-chip" data-type="selection" type="button">Selection <span class="count" id="countSelection"></span></button>
+          <button class="filter-chip" data-type="short" type="button">Short Answer <span class="count" id="countShort"></span></button>
+          <button class="filter-chip" data-type="applied" type="button">Applied <span class="count" id="countApplied"></span></button>
+          <button class="ghost-btn" id="toggleAll" type="button" style="color: var(--navy); border-color: var(--line-strong);">展开全部答案</button>
+        </div>
+        <div class="progress-row">
+          <div class="progress-bar"><span id="qProgress"></span></div>
+          <span class="progress-text" id="qProgressText">0 / 0</span>
+        </div>
+      </div>
+
+      <div class="q-list" id="questionList"></div>
+      <div class="empty-state" id="emptyState" hidden>没有匹配的题目，请调整筛选条件。</div>
+    </section>
+
+    <section id="glossary" aria-labelledby="glossaryTitle" style="margin-top: 60px;">
+      <div class="section-head">
+        <p class="section-kicker">Part III · Index</p>
+        <h2 id="glossaryTitle">术语索引 <span class="en">Concept Index</span></h2>
+        <p>全部知识点的英文术语与中文一句话索引。点击跳转到对应知识卡片。</p>
+      </div>
+      <div class="glossary-grid" id="glossaryList"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span><b>COMP2120/6120 Software Engineering</b> · Final Thoughts study companion</span>
+    <span>Chinese structure · English content · Answers hidden by default</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script src="assets/data-knowledge-a.js?v=1"></script>
+<script src="assets/data-knowledge-b.js?v=1"></script>
+<script src="assets/data-exercises-a.js?v=1"></script>
+<script src="assets/data-exercises-b.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
