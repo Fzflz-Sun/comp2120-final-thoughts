@@ -30,3 +30,13 @@ assets/data-exercises-b.js   # Short Answer + Applied
 ```
 
 内容依据课程讲义 *Final Thoughts* 整理，用于个人复习；讲义中的图表、代码与引文版权归原作者及 ANU 所有。
+
+## 更新站点
+
+```bash
+git add -A
+git commit -m "Update notes"
+git push
+```
+
+推送后 GitHub Pages 约 1 分钟内自动重新构建并发布。
